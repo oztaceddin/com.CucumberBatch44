@@ -14,7 +14,7 @@ import org.junit.runner.RunWith;
 
         features = "src/test/resources/features",//featurelerin yolu
         glue = "stepdefinitions",//methodların yolu
-        tags = "@hotel",//@ten sonra hangi Scenario başına @ ",,,"  varsa onu çalıştırır
+        tags = "@Editor",//@ten sonra hangi Scenario başına @ ",,,"  varsa onu çalıştırır
         dryRun = true
 
 
@@ -29,6 +29,12 @@ public class Runner {
      //dryrun false yazıldıgında belirlenen tagla etiketlenen tüm senaryoları sırasıyla çılıştırır
     //dryrun=true dediğimizde ise kodları çalıştırmadan eksik stepler olup olmaadıgını kontrol eder
     // ve varsa bize eksik stepleri rapor eder
+
+
+    // features ve glue olarak spesifik bir class veya feature dosyasini degil
+    // tum klasor ve package'i sectik
+    // dolayisiyla stepdefinitions package'i icerisinde hangi class'da olursa olsun
+    // isimize yarayan bir stepdefition varsa rahatlikla kullanabiliriz
 
 
 

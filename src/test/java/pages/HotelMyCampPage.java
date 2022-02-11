@@ -5,9 +5,9 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utilities.Driver;
 
-public class HotelMyCampPages {
+public class HotelMyCampPage {
 
-    public HotelMyCampPages(){
+    public HotelMyCampPage(){
 
         PageFactory.initElements(Driver.getDriver(),this);
 
@@ -35,6 +35,8 @@ public class HotelMyCampPages {
     @FindBy(xpath="//span[text()='ListOfUsers']")
     public WebElement basariliGirisYaziElementi;
 
+    @FindBy(xpath = "//div[@class='validation-summary-errors']")
+    public WebElement girisYapilamadiYaziElementi;
 
 
 

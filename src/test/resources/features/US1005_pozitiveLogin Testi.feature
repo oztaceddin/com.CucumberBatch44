@@ -3,7 +3,7 @@ Feature: US1005 pozitive login testi
 
   @hotel
   Scenario: TC08 pozitive login
-    
+
     Given kullanici "HMCUrl" sayfasina gider
     And login linkine tıklar
     Then kullanıcı adi olrak "HMCValidUsername" girer
