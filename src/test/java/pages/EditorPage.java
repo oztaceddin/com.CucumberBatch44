@@ -14,6 +14,7 @@ public class EditorPage {
 
 
     }
+    //
 
 
     @FindBy(xpath = "//button[@class='dt-button buttons-create']")

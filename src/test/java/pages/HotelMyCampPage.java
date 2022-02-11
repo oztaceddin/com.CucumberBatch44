@@ -13,6 +13,7 @@ public class HotelMyCampPage {
 
 
     }
+    //
 
 
     @FindBy(xpath = "//a[text()='Log in']")

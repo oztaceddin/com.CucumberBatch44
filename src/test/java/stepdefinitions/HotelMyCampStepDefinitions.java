@@ -62,4 +62,5 @@ public class HotelMyCampStepDefinitions {
     public void scenarioOutlinDanPasswordOlarakYazar(String password) {
         hotelMyCampPage.passwordBox.sendKeys(password);
     }
+    //
 }

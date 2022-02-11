@@ -13,6 +13,7 @@ public class AmazonPage {
 
 
     }
+    //
 
     @FindBy(id="twotabsearchtextbox")
     public WebElement amazonAramaKutusu;
