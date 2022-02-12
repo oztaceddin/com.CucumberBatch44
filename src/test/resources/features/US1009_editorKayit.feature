@@ -3,13 +3,14 @@
 Feature: US1009 scenario outline ile editor database sayfasina kayıt
 
 
-  Scenario Outline : TC14
+  Scenario Outline: TC14 kullanici yeni kayit ekleyebilmeli
 
     When kullanici editor anasayfaya gider
     Then new butonuna basar
     And firstname olarak "<firstname>" yazar
     And lastname olarak "<lastname>" yazar
     And Position olarak "<position>" yazar
+    And 1 saniye bekler
     And Office olarak "<office>" yazar
     And Extension olarak "<extension>" yazar
     And Start date olarak "<startDate>" yazar
@@ -21,11 +22,8 @@ Feature: US1009 scenario outline ile editor database sayfasina kayıt
     Then isim bolumunde "<firstname>" oldugunu dogrular
 
 
-
-
-Examples:
-    |firstname|lastname|position|office|extension|startDate|salary|
-    |taceddin |öz      |amale   |dünya |amale    |2020-01-01|500  |
-
+    Examples:
+      |firstname|lastname|position|office|extension|startDate|salary|
+      |mehmet   |bulutlu |amele   |amsterdam|amele |2021-01-01|200  |
 
 

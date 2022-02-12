@@ -7,15 +7,8 @@ import utilities.Driver;
 
 public class EditorPage {
     public EditorPage(){
-
-
         PageFactory.initElements(Driver.getDriver(),this);
-
-
-
     }
-    //
-
 
     @FindBy(xpath = "//button[@class='dt-button buttons-create']")
     public WebElement newButonu;
@@ -31,12 +24,14 @@ public class EditorPage {
 
     @FindBy(xpath="//input[@id='DTE_Field_office']")
     public WebElement officeBox;
+
     @FindBy(xpath="//input[@id='DTE_Field_extn']")
     public WebElement extensionBox;
+
     @FindBy(xpath="//input[@id='DTE_Field_start_date']")
     public WebElement dateBox;
 
-    @FindBy(xpath="/input[@id='DTE_Field_salary']")
+    @FindBy(xpath="//input[@id='DTE_Field_salary']")
     public WebElement salary;
 
     @FindBy(css = "[class=\"btn\"]")
@@ -47,6 +42,7 @@ public class EditorPage {
 
     @FindBy(css = "[class=\"sorting_1\"]")
     public WebElement aramasonucuElement;
+
 
 
 

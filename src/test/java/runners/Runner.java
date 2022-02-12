@@ -12,10 +12,12 @@ import org.junit.runner.RunWith;
 
 @CucumberOptions(
 
+        plugin={"html:target\\cucumber-reports.html"},//raporlama yapmak için bunu yaparız
+
         features = "src/test/resources/features",//featurelerin yolu
         glue = "stepdefinitions",//methodların yolu
-        tags = "@Editor",//@ten sonra hangi Scenario başına @ ",,,"  varsa onu çalıştırır
-        dryRun = true
+        tags = "@parametrelitest",//@ten sonra hangi Scenario başına @ ",,,"  varsa onu çalıştırır
+        dryRun = false
 
 
 
