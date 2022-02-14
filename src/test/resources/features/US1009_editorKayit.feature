@@ -1,6 +1,5 @@
-
-
-Feature: US1009 scenario outline ile editor database sayfasina kayıt
+@Editor
+Feature: US1009 Scenario Outline ile editor database sayfasina kayit
 
 
   Scenario Outline: TC14 kullanici yeni kayit ekleyebilmeli
@@ -20,10 +19,11 @@ Feature: US1009 scenario outline ile editor database sayfasina kayıt
     And 1 saniye bekler
     When kullanici "<firstname>" ile arama yapar
     Then isim bolumunde "<firstname>" oldugunu dogrular
+    And sayfayi kapatir
+
 
 
     Examples:
       |firstname|lastname|position|office|extension|startDate|salary|
       |mehmet   |bulutlu |amele   |amsterdam|amele |2021-01-01|200  |
-
-
+      |Zehra    |Nazli   |tester  |istanbul |PO    |2021-02-12|100000|

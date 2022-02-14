@@ -6,41 +6,24 @@ import io.cucumber.junit.CucumberOptions;
 import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
-
-//rotasyonlar içlerinde mini datalar bulunur
-
-
 @CucumberOptions(
-
-        plugin={"html:target\\cucumber-reports.html"},//raporlama yapmak için bunu yaparız
-
-        features = "src/test/resources/features",//featurelerin yolu
-        glue = "stepdefinitions",//methodların yolu
-        tags = "@parametrelitest",//@ten sonra hangi Scenario başına @ ",,,"  varsa onu çalıştırır
+        plugin={"html:target\\cucumber-reports.html"},
+        features="src/test/resources/features",
+        glue = "stepdefinitions",
+        tags="@toplu",
         dryRun = false
-
-
-
 )
 
-
 public class Runner {
-    //runner class ının içine hiç bir kod yazmıyoruz
-    //bu class için önemli olan kullanacagımız 2 adet notasyon vardır
+    // Runner class'inin body'sine hic bir kod yazmiyoruz
+    // bu class icin onemli olan kullanacagimiz 2 adet notasyon
 
-     //dryrun false yazıldıgında belirlenen tagla etiketlenen tüm senaryoları sırasıyla çılıştırır
-    //dryrun=true dediğimizde ise kodları çalıştırmadan eksik stepler olup olmaadıgını kontrol eder
+    // dryRun=false yazildiginda belirlenen tag'la etiketlenen tum scenario'lari sirasiyla calistirir
+    // dryRun=true dedigimizde ise kodlari calistirmadan eksik stepler olup olmadigini kontrol eder
     // ve varsa bize eksik stepleri rapor eder
-
 
     // features ve glue olarak spesifik bir class veya feature dosyasini degil
     // tum klasor ve package'i sectik
     // dolayisiyla stepdefinitions package'i icerisinde hangi class'da olursa olsun
     // isimize yarayan bir stepdefition varsa rahatlikla kullanabiliriz
-
-
-
-
-
-
 }

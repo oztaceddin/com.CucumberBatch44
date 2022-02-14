@@ -4,63 +4,54 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import org.junit.Assert;
-import pages.HotelMyCampPage;
+import pages.HMCPage;
 import utilities.ConfigReader;
 
 public class HotelMyCampStepDefinitions {
+    HMCPage hmcPage=new HMCPage();
 
-    HotelMyCampPage hotelMyCampPage=new HotelMyCampPage();
-
-
-
-    @Given("login linkine tıklar")
-    public void login_linkine_tıklar() {
-
-        hotelMyCampPage.ilkLoginElementi.click();
+    @Given("login linkine tiklar")
+    public void login_linkine_tiklar() {
+        hmcPage.mainPageLoginLinki.click();
 
     }
-    @Then("kullanıcı adi olrak {string} girer")
-    public void kullanıcı_adi_olrak_girer(String kullanıcıTipi) {
-
-        hotelMyCampPage.usernameBox.sendKeys(ConfigReader.getProperty(kullanıcıTipi));
-
-    }
-    @Then("kullanıcı password olarak {string} girer")
-    public void kullanıcı_password_olarak_girer(String passwordTuru) {
-
-        hotelMyCampPage.passwordBox.sendKeys(ConfigReader.getProperty(passwordTuru));
+    @Then("kullanici adi olarak {string} girer")
+    public void kullanici_adi_olarak_girer(String kullaniciTipi) {
+        hmcPage.usernameTextBox.sendKeys(ConfigReader.getProperty(kullaniciTipi));
 
     }
-    @Then("login butonuna basar")
+    @Then("password olarak {string} girer")
+    public void password_olarak_girer(String passwordTuru) {
+        hmcPage.passwordTextBox.sendKeys(ConfigReader.getProperty(passwordTuru));
+
+    }
+    @Then("Login butonuna basar")
     public void login_butonuna_basar() {
-
-        hotelMyCampPage.loginBox.click();
-
-    }
-    @Then("basarili olarak giris yapildiğini test eder")
-    public void basarili_olarak_giris_yapildiğini_test_eder() {
-
-        Assert.assertTrue(hotelMyCampPage.basariliGirisYaziElementi.isDisplayed());
+        hmcPage.loginButonu.click();
 
     }
+    @Then("basarili olarak giris yapildigini test eder")
+    public void basarili_olarak_giris_yapildigini_test_eder() {
 
+        Assert.assertTrue(hmcPage.basariliGirisYaziElementi.isDisplayed());
 
-    @And("giris yapilamadigini test yapar")
-    public void girisYapilamadiginiTestYapar() {
+    }
 
-        Assert.assertTrue(hotelMyCampPage.girisYapilamadiYaziElementi.isDisplayed());
+    @And("giris yapilamadigini test eder")
+    public void girisYapilamadiginiTestEder() {
+
+        Assert.assertTrue(hmcPage.girisYapilamadiYaziElementi.isDisplayed());
+
     }
 
 
-    @Then("scenario outline dan kullanici adi olarak {string} yazar")
+    @Then("scenario outline'dan kullanici adi olarak {string} yazar")
     public void scenarioOutlineDanKullaniciAdiOlarakYazar(String username) {
-        hotelMyCampPage.usernameBox.sendKeys(username);
+        hmcPage.usernameTextBox.sendKeys(username);
     }
 
-
-    @And("scenario outlin dan password olarak {string} yazar")
-    public void scenarioOutlinDanPasswordOlarakYazar(String password) {
-        hotelMyCampPage.passwordBox.sendKeys(password);
+    @And("scenario outline'dan password olarak {string} yazar")
+    public void scenarioOutlineDanPasswordOlarakYazar(String password) {
+        hmcPage.passwordTextBox.sendKeys(password);
     }
-    //
 }

@@ -1,6 +1,5 @@
 package stepdefinitions;
 
-
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
@@ -10,19 +9,16 @@ import utilities.Driver;
 
 public class Hooks {
 
-
-    //cucumber da feature ve stepdefinition eşleşmesi class seviyesinde değil
-    //package seviyesindedir
-    //dolayısıyla @before @after  stepdefinetion package ı altında herhangi bir yerde olabilir
-    //ancak uygulamada  genellikle hook isminde class oluşturup içine konur
-
-
-    //screenshot çalışması için testin fail olması lazım
+    // Cucumber'da feature ve stepdefinition eslesmesi class seviyesinde degil
+    // package seviyesindedir
+    // dolayisiyla @Before ve @After stepdefinitions package'i altinda herhangi bir yerde olabilir
+    // ancak uygulamada genellikle Hooks isminde bir class olusturup onun
+    // icine konulur
 
     @Before
     public void setUp(){
-    }
 
+    }
 
     @After
     public void tearDown(Scenario scenario){
@@ -33,8 +29,4 @@ public class Hooks {
         Driver.closeDriver();
     }
 
-
-
-
 }
-

@@ -8,23 +8,13 @@ import utilities.Driver;
 public class AmazonPage {
 
     public AmazonPage(){
-
         PageFactory.initElements(Driver.getDriver(),this);
-
-
     }
-    //
 
     @FindBy(id="twotabsearchtextbox")
-    public WebElement amazonAramaKutusu;
+    public WebElement aramaKutusu;
 
     @FindBy(xpath = "(//div[@class='a-section a-spacing-small a-spacing-top-small'])[1]")
     public WebElement sonucYazisiElementi;
-
-//deneme
-
-
-
-
 
 }

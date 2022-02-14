@@ -6,51 +6,13 @@ import org.openqa.selenium.support.PageFactory;
 import utilities.Driver;
 
 public class HerokuappPage {
-
     public HerokuappPage(){
-
         PageFactory.initElements(Driver.getDriver(),this);
-
     }
-
 
     @FindBy(css = "[onclick=\"addElement()\"]")
     public WebElement addButonElement;
 
     @FindBy(css = "[onclick=\"deleteElement()\"]")
     public WebElement deleteButonElement;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

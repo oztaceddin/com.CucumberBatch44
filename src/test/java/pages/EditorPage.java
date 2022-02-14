@@ -6,6 +6,7 @@ import org.openqa.selenium.support.PageFactory;
 import utilities.Driver;
 
 public class EditorPage {
+
     public EditorPage(){
         PageFactory.initElements(Driver.getDriver(),this);
     }
@@ -42,29 +43,6 @@ public class EditorPage {
 
     @FindBy(css = "[class=\"sorting_1\"]")
     public WebElement aramasonucuElement;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
