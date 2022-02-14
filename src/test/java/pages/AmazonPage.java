@@ -21,7 +21,7 @@ public class AmazonPage {
     @FindBy(xpath = "(//div[@class='a-section a-spacing-small a-spacing-top-small'])[1]")
     public WebElement sonucYazisiElementi;
 
-
+//deneme
 
 
 
